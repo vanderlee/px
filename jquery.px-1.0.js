@@ -1,4 +1,4 @@
-/* Measure v1.0
+/* px v1.0
  *
  * Copyright (c) 2011 Martijn W. van der Lee
  * Licensed under the MIT.
@@ -12,8 +12,7 @@
 //TODO Lazy on the inches, etc.
  
 (function( $ ){
-	$.fn.measure = function(size) {
-		// absolute; measure only once!
+	$.fn.px = function(size) {
 		var element = $('<div style="display:none;height:10in;border:0;margin:0;padding:0"></div>').appendTo('body');
 		var inch = element.height() / 10.;
 		element.remove();
@@ -115,7 +114,7 @@
 		return length * px;
 	};
 	
-	$.measure = function(size) {
-		return $('body').measure(size);
+	$.px = function(size) {
+		return $('body').px(size);
 	};
 })( jQuery );

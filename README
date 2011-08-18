@@ -1,4 +1,4 @@
-Measure v1.0
+jQuery.px v1.0
 
 Copyright (c) 2011 Martijn W. van der Lee
 Licensed under the MIT.
@@ -7,8 +7,8 @@ Measure an amount of CSS3 units in pixels, relative to a specified context if av
 Based on http://www.filamentgroup.com/lab/update_jquery_plugin_for_retaining_scalable_interfaces_with_pixel_to_em_con/
 
 Syntax:
-    $(<context>).measure(<size>);
-    $.measure(<size>);
+    $(<context>).px(<size>);
+    $.px(<size>);
     
 Arguments:
     context (optional)
@@ -25,7 +25,7 @@ Arguments:
             border-thin, border-medium, border-thick    (alternative names for border widths)
             %                                           (relative to current font-size, uses context)
             xx-small, x-small, small, medium,
-                large, x-large, xx-large                (font-size names, no context)
+             large, x-large, xx-large                   (font-size names, no context)
             smaller, larger                             (relative font-size names, uses context)                            
         Both the number and unit/constant are optional; number will default to '1', unit will default to 'em'.
     
@@ -34,10 +34,10 @@ Return:
             If the unit is specified but not recognized, an error will be thrown.
 
 Examples:
-    $.measure();                // returns the current font-size (1em) set in <body>, measured in pixels.
-    $.measure('thin');          // returns the "thin" border-width, measured in pixels.
-    $.measure('small');         // returns the "small" font-size. measured in pixels.
-    $.measure('2in');           // returns the number of pixels in 2 inches.
-    $.measure('200%');          // returns the number of pixels in a font-size 200% the size of the font in <body>.
-    $('#here').measure('200%'); //  ... same as above, but relative to font-size in the tag with id="here".
-    $('#here').measure('in');   // returns the number of pixels in an inch. The context is ignored.
+    $.px();                // returns the current font-size (1em) set in <body>, measured in pixels.
+    $.px('thin');          // returns the "thin" border-width, measured in pixels.
+    $.px('small');         // returns the "small" font-size. measured in pixels.
+    $.px('2in');           // returns the number of pixels in 2 inches.
+    $.px('200%');          // returns the number of pixels in a font-size 200% the size of the font in <body>.
+    $('#here').px('200%'); //  ... same as above, but relative to font-size in the tag with id="here".
+    $('#here').px('in');   // returns the number of pixels in an inch. The context is ignored.
