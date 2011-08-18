@@ -3,7 +3,7 @@
  * Copyright (c) 2011 Martijn W. van der Lee
  * Licensed under the MIT.
  *
- * Measure an amount of units, optionally within a specified context, otherwise 'body'.
+ * Measure an amount of CSS3 units in pixels, relative to a specified context if available.
  * Based on http://www.filamentgroup.com/lab/update_jquery_plugin_for_retaining_scalable_interfaces_with_pixel_to_em_con/
  */
 
@@ -92,7 +92,7 @@
 				px = _measureRelativeUnit('em', this.first()) / 100.;	// 1/100th of 1em
 				break;
 				
-		// font-size - plain names
+		// font-size - plain names (no context)
 			case 'xx-small':
 			case 'x-small':
 			case 'small':
@@ -100,6 +100,7 @@
 			case 'large':
 			case 'x-large':
 			case 'xx-large':
+		// font-size - plain names (uses context)
 			case 'smaller':
 			case 'larger':
 				px = _measureFontSize(unit, this.first());
