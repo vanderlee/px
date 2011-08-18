@@ -1,0 +1,34 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+	<head>
+		<title>Measure</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+		<script src="jquery.measure-1.0.js"></script>
+		<script>		
+			$( function() {
+				$('#context-em > div').each( function() {
+					$(this).append(' = '+$(this).measure()+'px');
+				});
+			});
+		</script>
+		<style>
+			body {
+				font-family: "Segoe UI", Arial, sans-serif;
+				font-size: 14px;
+			}
+		</style>
+	</head>
+
+	<body>
+		<h1>Measure demo; context sensitivity</h1>
+		<div id="context-em">
+			<div>Default</div>
+			<div style="font-size: x-small;">x-small</div>
+			<div style="font-size: 20px;">20 pixels</div>
+			<div style="font-size: 1in;">1 inch</div>
+			<div style="font-size: larger;">larger</div>
+			<div style="font-size: 1cm;">1 centimeter</div>
+			<div style="font-size: 1mm;">1 millimeter</div>
+		</div>
+	</body>
+</html>
