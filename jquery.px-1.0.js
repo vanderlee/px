@@ -1,4 +1,5 @@
 /* px v1.0
+ * https://github.com/vanderlee/px
  *
  * Copyright (c) 2011 Martijn W. van der Lee
  * Licensed under the MIT.

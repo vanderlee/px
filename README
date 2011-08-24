@@ -30,8 +30,9 @@ Arguments:
         Both the number and unit/constant are optional; number will default to '1', unit will default to 'em'.
     
 Return:
-    pixels    The measured size in pixel units.
-            If the unit is specified but not recognized, an error will be thrown.
+    pixels 
+		The measured size in pixel units.
+        If the unit is specified but not recognized, an error will be thrown.
 
 Examples:
     $.px();                // returns the current font-size (1em) set in <body>, measured in pixels.
