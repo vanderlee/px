@@ -1,13 +1,29 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html>
 	<head>
-		<title>Measure</title>
+		<title>jQuery.px</title>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+		<link href="http://fonts.googleapis.com/css?family=Droid+Sans+Mono" rel="stylesheet" type="text/css"/>
 		<script src="jquery.px-1.0.js"></script>
 		<script>		
 			$( function() {
-				$('#context-em > div').each( function() {
-					$(this).append(' = '+$(this).px()+'px');
+				$('.demo-context > div').each( function() {
+					$(this).prepend('<span class="reset">$(this).px("1em") = '+$(this).px()+'px</span>');
+				});
+				
+				$('.demo-units > div').each( function() {
+					var id = $(this).attr('id');
+					$(this).prepend('<span class="reset">$(this).px("1'+id+'") = '+$(this).px(id)+'px</span>');
+				});
+				
+				$('.demo-units-without > div').each( function() {
+					var id = $(this).attr('id');
+					$(this).prepend('<span class="reset">$.px("'+id+'") = '+$.px(id)+'px</span>');
+				});	
+				
+				$('.demo-quantity > div').each( function() {
+					var id = $(this).attr('id');
+					$(this).prepend('<span class="reset">$.px("'+id+'em") = '+$.px(id)+'px</span>');
 				});
 			});
 		</script>
@@ -16,20 +32,118 @@
 				font-family: "Segoe UI", Arial, sans-serif;
 				font-size: 14px;
 			}
+			
+			.reset {
+				font-size: 11px;
+				background-color: #ccc;
+				min-width: 300px;
+				display: inline-block;
+				padding: 2px;
+				font-family:	'Droid Sans Mono', 'Courier New', Courier, monospace;				
+			}
+			
+			.demo > div {
+				border-bottom: solid 1px #ddd;
+			}
 		</style>
 	</head>
 
 	<body>
-		<h1>Measure demo; context sensitivity</h1>
-		<div id="context-em">
+		<h1>jQuery.px</h1>
+		<h2>1em within different contexts of font-size&hellip;</h2>
+		<div class="demo demo-context">
 			<div>Default</div>
-			<div style="font-size: x-small;">x-small</div>
-			<div style="font-size: 20px;">20 pixels</div>
-			<div style="font-size: 1in;">1 inch</div>
-			<div style="font-size: larger;">larger</div>
-			<div style="font-size: 1cm;">1 centimeter</div>
-			<div style="font-size: 1mm;">1 millimeter</div>
-			<div style="font-size: 100%;">100%</div>
+			<div style="font-size: x-small;">	font-size: x-small</div>
+			<div style="font-size: 20px;">		font-size: 20px</div>
+			<div style="font-size: 1in;">		font-size: 1in</div>
+			<div style="font-size: larger;">	font-size: larger</div>
+			<div style="font-size: 1cm;">		font-size: 1cm</div>
+			<div style="font-size: 1mm;">		font-size: 1mm</div>
+			<div style="font-size: 100%;">		font-size: 100%</div>
+			<div style="font-size: 2.54cm;">	font-size: 2.54cm</div>
+		</div>
+		<h2>Different unit sizes, within context of font-size: 10px</h2>
+		<div class="demo demo-units" style="font-size: 10px;">
+			<div id="px"></div>
+			<div id="%"></div>
+			<div id="em"></div>
+			<div id="ex"></div>
+			<div id="rem"></div>
+			<div id="mm"></div>
+			<div id="cm"></div>
+			<div id="in"></div>
+			<div id="pt"></div>
+			<div id="pc"></div>
+			<div id="vw"></div>
+			<div id="vh"></div>
+			<div id="vm"></div>
+			<div id="thin"></div>
+			<div id="thick"></div>
+			<div id="border-thick"></div>
+			<div id="border-medium"></div>
+			<div id="larger"></div>
+			<div id="medium"></div>
+		</div>
+		<h2>Different unit sizes, within context of font-size: 20px</h2>
+		<div class="demo demo-units" style="font-size: 20px;">
+			<div id="px"></div>
+			<div id="%"></div>
+			<div id="em"></div>
+			<div id="ex"></div>
+			<div id="rem"></div>
+			<div id="mm"></div>
+			<div id="cm"></div>
+			<div id="in"></div>
+			<div id="pt"></div>
+			<div id="pc"></div>
+			<div id="vw"></div>
+			<div id="vh"></div>
+			<div id="vm"></div>
+			<div id="thin"></div>
+			<div id="thick"></div>
+			<div id="border-thick"></div>
+			<div id="border-medium"></div>
+			<div id="larger"></div>
+			<div id="medium"></div>
+		</div>		
+		<h2>Different unit sizes, without context (&lt;body&gt; has font-size: 14px)</h2>
+		<div class="demo demo-units-without">
+			<div id="px"></div>
+			<div id="%"></div>
+			<div id="em"></div>
+			<div id="ex"></div>
+			<div id="rem"></div>
+			<div id="mm"></div>
+			<div id="cm"></div>
+			<div id="in"></div>
+			<div id="pt"></div>
+			<div id="pc"></div>
+			<div id="vw"></div>
+			<div id="vh"></div>
+			<div id="vm"></div>
+			<div id="thin"></div>
+			<div id="thick"></div>
+			<div id="border-thick"></div>
+			<div id="border-medium"></div>
+			<div id="larger"></div>
+			<div id="medium"></div>
+		</div>		
+		<h2>Different quantities</h2>
+		<div class="demo demo-quantity">
+			<div id="1"></div>
+			<div id="2"></div>
+			<div id="2.2"></div>
+			<div id="2.22"></div>
+			<div id="2.222"></div>
+			<div id="2.2222"></div>
+			<div id="0"></div>
+			<div id="-1"></div>
+			<div id="-2"></div>
+			<div id="-2.2"></div>
+			<div id="1."></div>
+			<div id="1.0"></div>
+			<div id=".1"></div>
+			<div id="0.1"></div>
 		</div>
 	</body>
 </html>

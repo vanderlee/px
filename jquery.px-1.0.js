@@ -68,7 +68,7 @@
 				px = win.width() / 100.;
 				break;
 			case 'vh':
-				px = win.width() / 100.;
+				px = win.height() / 100.;
 				break;
 			case 'vm':
 				px = Math.min(win.width(), win.height()) / 100.;
