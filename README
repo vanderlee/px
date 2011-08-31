@@ -21,7 +21,7 @@ Arguments:
             px, in, cm, mm, pt, pc                      (no context)
             em, ex, rem                                 (uses context)
             vw, vh, vm                                  (no context)
-			vd											(no context, not a CSS3 unit; hypothenuse of vw and vh).
+			vd											(no context, not a CSS3 unit; hypothenuse of vw and vh)
             thin, thick                                 (border widths)
             border-thin, border-medium, border-thick    (alternative names for border widths)
             %                                           (relative to current font-size, uses context)

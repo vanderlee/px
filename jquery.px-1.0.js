@@ -40,9 +40,8 @@
 			element.remove();
 			return width;
 		}		
-		
-		var re = /^([-+]?\d*\.?\d*)(\D*)$/i;
-		var m = re.exec(size);	
+	
+		var m		= /^([-+]?\d*\.?\d*)(\D*)$/i.exec(size);	
 		var length	= (size && m != null && m[1])? m[1] : 1;
 		var unit	= (size && m != null && m[2])? m[2] : 'em';		
 
