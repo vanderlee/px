@@ -1,4 +1,4 @@
-/* px v1.0
+/* px v1.0.1
  * https://github.com/vanderlee/px
  *
  * Copyright (c) 2011 Martijn W. van der Lee
@@ -72,6 +72,11 @@
 				break;
 			case 'vm':
 				px = Math.min(win.width(), win.height()) / 100.;
+				break;
+			case 'vd':	// non-CSS3!
+				var w = win.width();
+				var h = win.height();
+				px = Math.sqrt((w * w) + (h * h)) / 100.;
 				break;
 				
 		// border - plain name
