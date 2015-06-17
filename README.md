@@ -1,6 +1,6 @@
 jQuery.px
 =========
-Version 1.0.2
+Version 1.1.0
 
 Copyright (c) 2011-2015 Martijn W. van der Lee
 Licensed under the MIT.
@@ -26,7 +26,7 @@ The unit can be any of the following:
 
 *	px, in, cm, mm, pt, pc                      (no context)
 *	em, ex, rem                                 (uses context)
-*	vw, vh, vm                                  (no context)
+*	vw, vh, vm, vmin, vmax                      (no context)
 *	vd											(no context, not a CSS3 unit; hypothenuse of vw and vh)
 *	thin, thick                                 (border widths)
 *	border-thin, border-medium, border-thick    (alternative names for border widths)

@@ -67,12 +67,16 @@
 				px = win.height() / 100.;
 				break;
 			case 'vm':
+			case 'vmin':
 				px = Math.min(win.width(), win.height()) / 100.;
 				break;
 			case 'vd':	// non-CSS3!
 				var w = win.width();
 				var h = win.height();
 				px = Math.sqrt((w * w) + (h * h)) / 100.;
+				break;
+			case 'vmax':	// Not supported on IE
+				px = Math.max(win.width(), win.height()) / 100.;
 				break;
 				
 		// border - plain name
