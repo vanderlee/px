@@ -27,39 +27,35 @@
 			});
 		</script>
 		<style>
-			body {
-				font-family: "Segoe UI", Arial, sans-serif;
-				font-size: 14px;
-			}
-			
 			.reset {
-				font-size: 11px;
-				background-color: #ccc;
-				min-width: 300px;
-				display: inline-block;
-				padding: 2px;
-				font-family:	'Droid Sans Mono', 'Courier New', Courier, monospace;				
+				font-size:			11px;
+				background-color:	#ccc;
+				min-width:			300px;
+				display:			inline-block;
+				padding:			2px;
+				font-family:		'Courier New', Courier, monospace;				
 			}
 			
 			.demo > div {
-				border-bottom: solid 1px #ddd;
+				border-bottom:	solid 1px #ddd;
 			}
 		</style>
 	</head>
 
 	<body>
 		<h1>jQuery.px</h1>
+		Measure CSS units in pixels.
 		<h2>Reference: 1em within different contexts of font-size&hellip;</h2>
 		<div class="demo demo-context">
 			<div>Default</div>
-			<div style="font-size: x-small;">	font-size: x-small</div>
-			<div style="font-size: 20px;">		font-size: 20px</div>
-			<div style="font-size: 1in;">		font-size: 1in</div>
-			<div style="font-size: larger;">	font-size: larger</div>
-			<div style="font-size: 1cm;">		font-size: 1cm</div>
-			<div style="font-size: 1mm;">		font-size: 1mm</div>
-			<div style="font-size: 100%;">		font-size: 100%</div>
-			<div style="font-size: 2.54cm;">	font-size: 2.54cm</div>
+			<div style="font-size: x-small;">	x-small</div>
+			<div style="font-size: 20px;">		20px</div>
+			<div style="font-size: 1in;">		1in</div>
+			<div style="font-size: larger;">	larger</div>
+			<div style="font-size: 1cm;">		1cm</div>
+			<div style="font-size: 1mm;">		1mm</div>
+			<div style="font-size: 100%;">		100%</div>
+			<div style="font-size: 2.54cm;">	2.54cm</div>
 		</div>
 		<h2>Different unit sizes, within context of font-size: 10px</h2>
 		<div class="demo demo-units" style="font-size: 10px;">
