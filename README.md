@@ -33,6 +33,7 @@ The unit can be any of the following:
 *	%                                           (relative to current font-size, uses context)
 *	xx-small, x-small, small, medium,
 *	 large, x-large, xx-large                   (font-size names, no context)
+*	initial										(initial font-size)
 *	smaller, larger                             (relative font-size names, uses context)
 
 Both the number and unit/constant are optional; number will default to '1', unit will default to 'em'.

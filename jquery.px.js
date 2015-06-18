@@ -11,8 +11,8 @@
 
 (function($, undefined){
 	$.fn.px = function(size) {
-		var element = $('<div style="display:none;height:10in;border:0;margin:0;padding:0"></div>').appendTo('body'),
-			inch	= element.height() / 10.;
+		var element = $('<div style="display:none;height:100in;border:0;margin:0;padding:0"></div>').appendTo('body'),
+			inch	= element.height() / 100.;
 		element.remove();
 		
 		var win = $(window);
@@ -25,8 +25,8 @@
 		}	
 	
 		function _measureRelativeUnit(unit, context) {
-			var element = $('<div style="display:none;height:10'+unit+';margin:0;padding:0;border:0;"></div>').appendTo(context),
-				px		= element.height() / 10.;
+			var element = $('<div style="display:none;height:100'+unit+';margin:0;padding:0;border:0;"></div>').appendTo(context),
+				px		= element.height() / 100.;
 			element.remove();
 			return px;
 		}
@@ -109,6 +109,7 @@
 		// font-size - plain names (uses context)
 			case 'smaller':
 			case 'larger':
+			case 'initial':
 				px = _measureFontSize(unit, this.first());
 				break;
 				
