@@ -56,6 +56,7 @@
 			case 'em':
 			case 'ex':
 			case 'rem':
+			case 'ch':
 				px = _measureRelativeUnit(unit, this.first());
 				break;
 				

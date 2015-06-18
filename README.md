@@ -1,6 +1,6 @@
 jQuery.px
 =========
-Version 1.1.0
+Version 1.2
 
 Copyright (c) 2011-2015 Martijn W. van der Lee
 Licensed under the MIT.
@@ -25,7 +25,7 @@ The number can be integer or floating point and may be preceded by a sign (-/+).
 The unit can be any of the following:
 
 *	px, in, cm, mm, pt, pc                      (no context)
-*	em, ex, rem                                 (uses context)
+*	em, ex, rem, ch                             (uses context)
 *	vw, vh, vm, vmin, vmax                      (no context)
 *	vd											(no context, not a CSS3 unit; hypothenuse of vw and vh)
 *	thin, thick                                 (border widths)
